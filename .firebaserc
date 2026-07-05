@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "pokerer-e996f"
+  },
+  "targets": {
+    "pokerer-e996f": {
+      "hosting": {
+        "pokerer": [
+          "pokerer"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
