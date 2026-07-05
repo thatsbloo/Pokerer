@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+body {
+    /* background-color: linear-gradient(to right, #2c2c2c, #feb47b); */
+    background: linear-gradient(to right, #2c2c2c 30%, #315e31);
+    text-align: left;
+}
+
+.header {
+    font-family: 'Limelight', cursive;
+    color: #f4ffc2;
+    padding-left: 20px;
+    font-size: 48px;
+}
+
+.button {
+    border-radius: 8px;
+    background-color: transparent;
+    border: 2px double #5cac3c;
+    margin: 10px;
+    width: 200px;
+    height: 40px;
+    color: #f4ffc2;
+    font-size: 18px;
+    font-family: 'Cutive Mono', monospace;
+    cursor: pointer;
+}
