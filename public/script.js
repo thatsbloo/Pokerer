@@ -39,8 +39,50 @@ document.getElementById("hostlobby").addEventListener("transitionend", (event) =
     promptdiv.style.display = "inline-block";
     event.target.hidden = true;
     promptdiv.hidden = false;
+
+    //add host menu
     
+    addHostMenu(promptdiv);
 });
+
+function addHostMenu(parent) {
+    // add child to parent
+    var title = document.createElement("p");
+    title.classList.add("showup");
+
+    title.innerText = "-=- Host Lobby -=-";
+    parent.appendChild(title);
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            title.classList.add("active");
+        });
+    });
+    parent.style.height = "auto";
+    var lobbynameinput = document.createElement("input");
+    lobbynameinput.classList.add("showup");
+    lobbynameinput.classList.add("button");
+    lobbynameinput.classList.add("input");
+    lobbynameinput.placeholder = "Lobby Name";
+    parent.appendChild(lobbynameinput);
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            lobbynameinput.classList.add("active");
+        });
+    });
+
+    var lobbypassinput = document.createElement("input");
+    lobbypassinput.classList.add("showup");
+    lobbypassinput.classList.add("button");
+    lobbypassinput.classList.add("input");
+    lobbypassinput.placeholder = "Lobby Password";
+    parent.appendChild(lobbypassinput);
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            lobbypassinput.classList.add("active");
+        });
+    });
+    
+}
 
 document.getElementById("joinlobby").addEventListener("click", () => {
     document.getElementById("hostlobby").hidden = true;
@@ -61,6 +103,7 @@ document.getElementById("joinlobby").addEventListener("transitionend", (event) =
     promptdiv.style.display = "inline-block";
     event.target.hidden = true;
     promptdiv.hidden = false;
+
 
 });
 

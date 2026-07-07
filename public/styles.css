@@ -31,19 +31,29 @@ body {
 }
 
 .promptdiv {
-    border-radius: 8px;
-    background-color: transparent;
-    border: 2px double #5cac3c;
-    margin-left: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 200px;
-    height: 40px;
-    color: #f4ffc2;
-    font-size: 18px;
-    font-family: 'Cutive Mono', monospace;
-    cursor: pointer;
-    transition: all 0.3s ease;
     box-sizing: border-box;
-    
+    cursor: default;
+    text-align: center;
+}
+
+.showup {
+    color: rgba(244, 255, 194, 0);
+    transition: all 0.3s ease;
+}
+
+.showup.active {
+    color: rgba(244, 255, 194, 1);
+}
+
+.button.input {
+    cursor: text;
+    margin-left: 0px;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    padding-left: 10px;
+}
+
+.button.input:focus {
+    outline: none;
+    border-color: #5cac3c;
+    box-shadow: 0 0 5px #5cac3c;
 }
