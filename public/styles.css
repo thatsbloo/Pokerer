@@ -4,6 +4,7 @@ body {
     /* background-color: linear-gradient(to right, #2c2c2c, #feb47b); */
     background: linear-gradient(to right, #2c2c2c 30%, #315e31);
     text-align: left;
+    margin: 0;
 }
 
 .header {
@@ -17,11 +18,32 @@ body {
     border-radius: 8px;
     background-color: transparent;
     border: 2px double #5cac3c;
-    margin: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 200px;
     height: 40px;
     color: #f4ffc2;
     font-size: 18px;
     font-family: 'Cutive Mono', monospace;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.promptdiv {
+    border-radius: 8px;
+    background-color: transparent;
+    border: 2px double #5cac3c;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+    height: 40px;
+    color: #f4ffc2;
+    font-size: 18px;
+    font-family: 'Cutive Mono', monospace;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    
 }
