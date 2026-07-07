@@ -52,23 +52,26 @@ function addHostMenu(parent) {
 
     title.innerText = "-=- Host Lobby -=-";
     parent.appendChild(title);
-    requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-            title.classList.add("active");
-        });
-    });
-    parent.style.height = "auto";
+    // requestAnimationFrame(() => {
+    //     requestAnimationFrame(() => {
+    //         title.classList.add("active");
+    //     });
+    // });
+    // parent.style.height = "auto";
     var lobbynameinput = document.createElement("input");
     lobbynameinput.classList.add("showup");
     lobbynameinput.classList.add("button");
     lobbynameinput.classList.add("input");
     lobbynameinput.placeholder = "Lobby Name";
     parent.appendChild(lobbynameinput);
-    requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-            lobbynameinput.classList.add("active");
-        });
-    });
+    // requestAnimationFrame(() => {
+    //     requestAnimationFrame(() => {
+    //         lobbynameinput.classList.add("active");
+    //     });
+    // });
+
+    var linebreak = document.createElement("br");
+    parent.appendChild(linebreak);
 
     var lobbypassinput = document.createElement("input");
     lobbypassinput.classList.add("showup");
@@ -76,14 +79,55 @@ function addHostMenu(parent) {
     lobbypassinput.classList.add("input");
     lobbypassinput.placeholder = "Lobby Password";
     parent.appendChild(lobbypassinput);
-    requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-            lobbypassinput.classList.add("active");
-        });
-    });
+    // requestAnimationFrame(() => {
+    //     requestAnimationFrame(() => {
+    //         lobbypassinput.classList.add("active");
+    //     });
+    // });
+
+    var linebreak2 = document.createElement("br");
+    parent.appendChild(linebreak2);
+
+    var usernameinput = document.createElement("input");
+    usernameinput.classList.add("showup");
+    usernameinput.classList.add("button");
+    usernameinput.classList.add("input");
+    usernameinput.placeholder = "Username";
+    parent.appendChild(usernameinput);
+    // requestAnimationFrame(() => {
+    //     requestAnimationFrame(() => {
+    //         usernameinput.classList.add("active");
+    //     });
+    // });
+
+    var linebreak3 = document.createElement("br");
+    parent.appendChild(linebreak3);
+
+    var submitbutton = document.createElement("button");
+    submitbutton.classList.add("showup");
+    submitbutton.classList.add("button");
+    submitbutton.innerText = "Continue";
+    parent.appendChild(submitbutton);
     
+    var finalHeight = parent.scrollHeight ;
+
+    requestAnimationFrame(() => {
+        parent.style.height = finalHeight + "px";
+    
+    });
 }
 
+document.getElementById("promptdiv").addEventListener("transitionend", (event) => {
+    if (event.propertyName !== "height") return;
+    var elements = event.target.querySelectorAll(".showup");
+    requestAnimationFrame(() => {
+        elements.forEach((element) => {
+            requestAnimationFrame(() => {
+                element.classList.add("active");
+            });
+        });
+    });
+});
 document.getElementById("joinlobby").addEventListener("click", () => {
     document.getElementById("hostlobby").hidden = true;
     document.getElementById("hostlobbybr").hidden = true;

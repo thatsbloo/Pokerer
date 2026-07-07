@@ -39,10 +39,23 @@ body {
 .showup {
     color: rgba(244, 255, 194, 0);
     transition: all 0.3s ease;
+    border: 2px double rgba(92, 172, 60, 0);
 }
 
 .showup.active {
     color: rgba(244, 255, 194, 1);
+}
+
+.showup.input.active {
+    border: 2px double #5cac3c;
+}
+
+.showup.button.active {
+    border: 2px double #5cac3c;
+}
+
+.button.showup {
+    margin-left: 0px;
 }
 
 .button.input {
